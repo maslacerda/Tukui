@@ -446,15 +446,15 @@ do
 				r, g, b = oUF.ColorGradient(min/max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
 				if unit == "player" and health:GetAttribute("normalUnit") ~= "pet" then
 					if TukuiCF["unitframes"].showtotalhpmp == true then
-						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r", ShortValue(min), ShortValue(max))
+						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", ShortValue(min), ShortValue(max), r * 255, g * 255, b * 255, floor(min / max * 100))
 					else
-						health.value:SetFormattedText("|cffAF5050%d|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", min, r * 255, g * 255, b * 255, floor(min / max * 100))
+						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", ShortValue(min), ShortValue(max), r * 255, g * 255, b * 255, floor(min / max * 100))
 					end
 				elseif unit == "target" or unit == "focus" or (unit and unit:find("boss%d")) then
 					if TukuiCF["unitframes"].showtotalhpmp == true then
-						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r", ShortValue(min), ShortValue(max))
+						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", ShortValue(min), ShortValue(max), r * 255, g * 255, b * 255, floor(min / max * 100))
 					else
-						health.value:SetFormattedText("|cffAF5050%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", ShortValue(min), r * 255, g * 255, b * 255, floor(min / max * 100))
+						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", ShortValue(min), ShortValue(max), r * 255, g * 255, b * 255, floor(min / max * 100))
 					end
 				elseif (unit and unit:find("arena%d")) then
 					health.value:SetText("|cff559655"..ShortValue(min).."|r")
@@ -548,23 +548,23 @@ do
 				if pType == 0 then
 					if unit == "target" then
 						if TukuiCF["unitframes"].showtotalhpmp == true then
-							power.value:SetFormattedText("%s |cffD7BEA5|||r %s", ShortValue(max - (max - min)), ShortValue(max))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						else
-							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s", floor(min / max * 100), ShortValue(max - (max - min)))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						end
 					elseif unit == "player" and self:GetAttribute("normalUnit") == "pet" or unit == "pet" then
 						if TukuiCF["unitframes"].showtotalhpmp == true then
-							power.value:SetFormattedText("%s |cffD7BEA5|||r %s", ShortValue(max - (max - min)), ShortValue(max))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						else
-							power.value:SetFormattedText("%d%%", floor(min / max * 100))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						end
 					elseif (unit and unit:find("arena%d")) then
 						power.value:SetText(ShortValue(min))
 					else
 						if TukuiCF["unitframes"].showtotalhpmp == true then
-							power.value:SetFormattedText("%s |cffD7BEA5|||r %s", ShortValue(max - (max - min)), ShortValue(max))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						else
-							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %d", floor(min / max * 100), max - (max - min))
+							power.value:SetFormattedText("%d%% |cffD7BEA5-|r %s |cffD7BEA5|||r %s", floor(min / max * 100), ShortValue(min), ShortValue(max))
 						end
 					end
 				else
