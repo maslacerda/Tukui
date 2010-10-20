@@ -1,6 +1,6 @@
 ﻿TukuiCF["general"] = {
-	["autoscale"] = true,                  -- mainly enabled for users that don't want to mess with the config file
-	["uiscale"] = 0.71,                    -- set your value (between 0.64 and 1) of your uiscale if autoscale is off
+	["autoscale"] = false,                  -- mainly enabled for users that don't want to mess with the config file
+	["uiscale"] = 0.81,                    -- set your value (between 0.64 and 1) of your uiscale if autoscale is off
 	["overridelowtohigh"] = false,         -- EXPERIMENTAL ONLY! override lower version to higher version on a lower reso.
 	["multisampleprotect"] = true,         -- i don't recommend this because of shitty border but, voila!
 }
@@ -70,7 +70,7 @@ TukuiCF["actionbar"] = {
 	["hotkey"] = true,                     -- enable hotkey display because it was a lot requested
 	["hideshapeshift"] = false,            -- hide shapeshift or totembar because it was a lot requested.
 	["bottomrows"] = 2,                    -- numbers of row you want to show at the bottom (select between 1 and 2 only)
-	["rightbars"] = 3,                     -- numbers of right bar you want
+	["rightbars"] = 1,                     -- numbers of right bar you want
 	["showgrid"] = true,                   -- show grid on empty button
 }
 
@@ -118,7 +118,7 @@ TukuiCF["datatext"] = {
 	["battleground"] = true,               -- enable 3 stats in battleground only that replace stat1,stat2,stat3.
 	["time24"] = true,                     -- set time to 24h format.
 	["localtime"] = false,                 -- set time to local time instead of server time.
-	["fontsize"] = 12,                     -- font size for panels.
+	["fontsize"] = 13,                     -- font size for panels.
 }
 
 TukuiCF["chat"] = {
