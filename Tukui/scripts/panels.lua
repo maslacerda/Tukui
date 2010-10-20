@@ -17,7 +17,7 @@ if TukuiDB.lowversion == true then
 		barbg:SetHeight(TukuiDB.buttonsize + (TukuiDB.buttonspacing * 2))
 	end
 else
-	barbg:SetWidth((TukuiDB.buttonsize * 15) + (TukuiDB.buttonspacing * 16))
+	barbg:SetWidth((TukuiDB.buttonsize * 14) + (TukuiDB.buttonspacing * 15))
 	if TukuiCF["actionbar"].bottomrows == 2 then
 		barbg:SetHeight((TukuiDB.buttonsize * 2) + (TukuiDB.buttonspacing * 3))
 	else
