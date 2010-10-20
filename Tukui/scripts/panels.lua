@@ -104,6 +104,10 @@ if TukuiMinimap then
 	TukuiDB.CreatePanel(minimapstatsright, ((TukuiMinimap:GetWidth() + 4) / 2) -1, 19, "TOPRIGHT", TukuiMinimap, "BOTTOMRIGHT", 0, TukuiDB.Scale(-2))
 end
 
+-- CHAT BG LEFT
+local chatleftbg = CreateFrame("Frame", "TukuiChatBackgroundLeft", TukuiInfoLeft)
+TukuiDB.CreateTransparentPanel(chatleftbg, TukuiCF["panels"].tinfowidth, TukuiDB.Scale(125), "BOTTOM", TukuiInfoLeft, "TOP", 0, TukuiDB.Scale(3))
+
 --RIGHT BAR BACKGROUND
 if TukuiCF["actionbar"].enable == true then
 	local barbgr = CreateFrame("Frame", "TukuiActionBarBackgroundRight", UIParent)

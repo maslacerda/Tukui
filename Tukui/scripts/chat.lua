@@ -203,19 +203,29 @@ local function SetupChatPosAndFont(self)
 		-- force chat position on #1 and #4, needed if we change ui scale or resolution
 		-- also set original width and height of chatframes 1 and 4 if first time we run tukui.
 		-- doing resize of chat also here for users that hit "cancel" when default installation is show.
-		if i == 1 then
-			chat:ClearAllPoints()
-			chat:SetPoint("BOTTOMLEFT", TukuiInfoLeft, "TOPLEFT", TukuiDB.Scale(-1), TukuiDB.Scale(6))
-			FCF_SavePositionAndDimensions(chat)
-		elseif i == 4 and name == "Loot" then
-			if not chat.isDocked then
-				chat:ClearAllPoints()
-				chat:SetPoint("BOTTOMRIGHT", TukuiInfoRight, "TOPRIGHT", 0, TukuiDB.Scale(6))
-				chat:SetJustifyH("RIGHT") 
-				FCF_SavePositionAndDimensions(chat)
-			end
-		end
-	end
+       if i == 1 then
+            chat:ClearAllPoints()
+            chat:SetPoint("BOTTOMLEFT", TukuiInfoLeft, "TOPLEFT", TukuiDB.Scale(3), TukuiDB.Scale(6))
+            FCF_SavePositionAndDimensions(chat)
+            chat:SetWidth(360)
+            chat:SetHeight(126)
+        elseif i == 4 and name == "Loot" then
+            if not chat.isDocked then
+                chat:ClearAllPoints()
+                chat:SetPoint("BOTTOMRIGHT", TukuiInfoRight, "TOPRIGHT", 0, TukuiDB.Scale(6))
+                chat:SetJustifyH("RIGHT") 
+ 
+                FCF_SavePositionAndDimensions(chat)
+            end
+        end
+    end
+ 
+    -- reposition battle.net popup over chat #1
+    BNToastFrame:HookScript("OnShow", function(self)
+        self:ClearAllPoints()
+        self:SetPoint("BOTTOMLEFT", ChatFrame1, "TOPLEFT", -1, TukuiDB.Scale(9))
+    end)
+end
 			
 	-- reposition battle.net popup over chat #1
 	BNToastFrame:HookScript("OnShow", function(self)
