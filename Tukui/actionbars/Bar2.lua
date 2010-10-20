@@ -25,6 +25,22 @@ end
 
 -- remove 4 buttons on high reso to fit bottom bar.
 if not TukuiDB.lowversion then
+	MultiBarBottomLeftButton3:SetAlpha(0)
+    	MultiBarBottomLeftButton3:SetScale(0.0001)
+	MultiBarBottomLeftButton4:SetAlpha(0)
+    	MultiBarBottomLeftButton4:SetScale(0.0001)
+    	MultiBarBottomLeftButton5:SetAlpha(0)
+    	MultiBarBottomLeftButton5:SetScale(0.0001)
+    	MultiBarBottomLeftButton6:SetAlpha(0)
+    	MultiBarBottomLeftButton6:SetScale(0.0001)
+    	MultiBarBottomLeftButton7:SetAlpha(0)
+    	MultiBarBottomLeftButton7:SetScale(0.0001)
+    	MultiBarBottomLeftButton8:SetAlpha(0)
+    	MultiBarBottomLeftButton8:SetScale(0.0001)
+    	MultiBarBottomLeftButton9:SetAlpha(0)
+    	MultiBarBottomLeftButton9:SetScale(0.0001)
+    	MultiBarBottomLeftButton10:SetAlpha(0)
+    	MultiBarBottomLeftButton10:SetScale(0.0001)
 	MultiBarBottomLeftButton11:SetAlpha(0)
 	MultiBarBottomLeftButton11:SetScale(0.0001)
 	MultiBarBottomLeftButton12:SetAlpha(0)

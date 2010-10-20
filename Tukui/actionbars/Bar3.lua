@@ -28,11 +28,27 @@ for i= 1, 12 do
 end
 
 -- remove 4 buttons on high reso to fit bottom bar.
-if not TukuiDB.lowversion and TukuiCF.actionbar.bottomrows == 2 then
-	MultiBarLeftButton11:SetScale(0.0001) 
+if not TukuiDB.lowversion then
+	MultiBarLeftButton3:SetAlpha(0)
+    	MultiBarLeftButton3:SetScale(0.0001)
+	MultiBarLeftButton4:SetAlpha(0)
+    	MultiBarLeftButton4:SetScale(0.0001)
+    	MultiBarLeftButton5:SetAlpha(0)
+    	MultiBarLeftButton5:SetScale(0.0001)
+    	MultiBarLeftButton6:SetAlpha(0)
+    	MultiBarLeftButton6:SetScale(0.0001)
+    	MultiBarLeftButton7:SetAlpha(0)
+    	MultiBarLeftButton7:SetScale(0.0001)
+    	MultiBarLeftButton8:SetAlpha(0)
+    	MultiBarLeftButton8:SetScale(0.0001)
+    	MultiBarLeftButton9:SetAlpha(0)
+    	MultiBarLeftButton9:SetScale(0.0001)
+    	MultiBarLeftButton10:SetAlpha(0)
+    	MultiBarLeftButton10:SetScale(0.0001)
 	MultiBarLeftButton11:SetAlpha(0)
-	MultiBarLeftButton12:SetScale(0.0001)
+	MultiBarLeftButton11:SetScale(0.0001)
 	MultiBarLeftButton12:SetAlpha(0)
+	MultiBarLeftButton12:SetScale(0.0001)
 end
 
 -- hide it if needed
